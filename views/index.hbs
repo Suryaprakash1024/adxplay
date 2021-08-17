@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+        
+    </head>
+    <title>Weather report</title>
+    <body><div>
+        <h3><b>Weather Report : </b></h3>
+        <p>The weather is static in your area<br>
+        {{title}} <br>
+        <form id="form">
+            <input name="address" placeholder="Enter Location">
+            <button>Search</button>
+        </form>    
+        <p id="Error"></p>
+        <p id="Data"></p>
+        </div>
+        </p>
+        <script>
+        const weatherform = document.querySelector('form')
+        const search = document.querySelector('input')
+        
+        weatherform.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        console.log(search.value)
+
+        const link = '/video?address='+search.value
+        <!-- fetch(link).then((response)=>{
+        response.json().then((data)=>{
+            if (data.error){
+                document.getElementById("Data").innerHTML=data.error
+            }
+            else{
+                document.getElementById("Data").innerHTML=
+                "The temperature in "+data.place+" is "+data.temp+". The Humidity is "+data.hum
+                }
+            })
+            })
+        }) -->
+            </script>
+        <script src="//res.adxplay.com/adxplay/sdk/adxplay.js?a=1&s=.cover&c=ADX_u_v0i_lVVj4Qi7yQ&stid=3626532" defer adxplayweb="adxplayweb"></script>
+    </body>
+</html>
