@@ -26,7 +26,7 @@ app.get('/share-video',(req,res)=>{
     }
     else{
         console.log(req.query.videoid)
-        var link = 'https://cofilink.com/api/ndisk-api/content/detail?item_id='+req.query.videoid+'uid=51081852&user_ip=1.0.0.1';
+        var link = 'https://cofilink.com/api/ndisk-api/content/detail?item_id='+req.query.videoid;
         const url = encodeURI(link);
         request({url,json:true},(error,{body}) => 
                     {
