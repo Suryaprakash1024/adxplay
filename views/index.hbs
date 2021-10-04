@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <link rel="stylesheet" href="/css/style.css">
-        
-    </head>
-    <title>Weather report</title>
-    <body><div>
-        <h3><b>Weather Report : </b></h3>
-        <p>The weather is static in your area<br>
+
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<title>MoviesNew</title>
+
+<body>
+    <div>
+        <h3><b>MoviesNew</b></h3>
         {{title}} <br>
         <form id="form">
-            <input name="address" placeholder="Enter Location">
+            <input name="address" placeholder="Enter video ID">
             <button>Search</button>
-        </form>    
+        </form>
         <p id="Error"></p>
         <p id="Data"></p>
-        </div>
-        </p>
-        <script>
+    </div>
+    </p>
+    <script>
         const weatherform = document.querySelector('form')
         const search = document.querySelector('input')
-        
-        weatherform.addEventListener('submit',(e)=>{
-        e.preventDefault()
-        console.log(search.value)
 
-        const link = '/video?address='+search.value
-            </script>
-    </body>
+        weatherform.addEventListener('submit', (e) => {
+            e.preventDefault()
+            console.log(search.value)
+            const link = '/share-video?videoid=' + search.value
+        });
+    </script>
+</body>
+
 </html>
