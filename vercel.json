@@ -6,9 +6,10 @@
             "use": "@vercel/node"
         }
     ],
-    "rewrites": [
-        { 
-            "source": "/share-video", "destination": "/share-video" 
+    "routes" : [
+        {
+            "src":"/share-video",
+            "dest": "/share-video"
         }
     ]
 }
